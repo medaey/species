@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#062a35">
+  <title>Zone des spécimens</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">ARCHIVE / RECHERCHE</div>
+        <h1>ZONE DES SPÉCIMENS</h1>
+      </div>
+      <div class="credits">
+        <strong>34219</strong>
+        <span>U.CREDITS</span>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <aside class="specimen-list">
+        <div class="list-head">
+          <span>SPÉCIMENS</span>
+          <button id="resetBtn" title="Réinitialiser les noms">↻</button>
+        </div>
+        <div id="specimenButtons" class="specimen-buttons"></div>
+      </aside>
+
+      <section class="details" aria-live="polite">
+        <div class="hero">
+          <div class="hero-noise"></div>
+          <div class="hero-label">ACCÈS AUTORISÉ</div>
+        </div>
+
+        <div class="title-row">
+          <div>
+            <div class="id-line">
+              <span id="specimenId">ID_009</span>
+              <span class="separator">|</span>
+              <span id="specimenName">MONSTRE DE CHAIR</span>
+            </div>
+            <p id="description" class="description"></p>
+          </div>
+          <div class="progress-box">
+            <span>PROGRESSION</span>
+            <strong id="progressText">90%</strong>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="tasks" class="tasks"></div>
+
+        <div class="actions">
+          <button id="editNameBtn" class="secondary">RENOMMER</button>
+          <button id="completeBtn" class="primary">ENREGISTRER</button>
+        </div>
+      </section>
+    </section>
+
+    <footer>
+      <span><kbd>ESC</kbd> QUITTER</span>
+      <span>ZONE LOCALE · DONNÉES CONSERVÉES SUR CET APPAREIL</span>
+    </footer>
+  </main>
+
+  <dialog id="nameDialog">
+    <form method="dialog" id="nameForm">
+      <h2>RENOMMER LE SPÉCIMEN</h2>
+      <p id="dialogId"></p>
+      <input id="nameInput" maxlength="40" autocomplete="off" placeholder="Nom du spécimen">
+      <div class="dialog-actions">
+        <button value="cancel" class="secondary">ANNULER</button>
+        <button value="save" class="primary">ENREGISTRER</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
