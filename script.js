@@ -122,12 +122,6 @@ document.querySelector("#nameForm").addEventListener("submit", event => {
   }
 });
 
-document.querySelector("#completeBtn").addEventListener("click", () => {
-  data[selected].progress = [...TOTAL_DOTS];
-  save();
-  render();
-});
-
 document.querySelector("#resetBtn").addEventListener("click", () => {
   if (!confirm("Réinitialiser tous les noms et la progression ?")) return;
   data = structuredClone(DEFAULT_SPECIMENS);
